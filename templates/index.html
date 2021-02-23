@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<title>Flight Price Prediction</title>
+</head>
+
+<body>
+	<h1><b><i><em>Flight Price Prediction</em></i></b></h1>
+<form method="POST",action="/">
+	
+	<div >
+	<div >
+		<h3>Enter Your Departure Date</h3>
+	<input type="datetime-local" name="Departure_Date" placeholder="dd/mm/yy" >
+	</div>
+	<div >
+		<h3>Enter Your Arrival Date</h3>
+	<input type="datetime-local" name="Arrival_Date" placeholder="dd/mm/yy">
+	</div>
+	</div>
+	<div>
+		<h3>Enter Your Source</h3>
+	<select name="Source">
+		<option value="Delhi">Delhi</option>
+		<option value="Kolkata">Kolkata</option>
+		<option value="Mumbai">Mumbai</option>
+		<option value="Chennai">Chennai</option>
+		<option value="Bangalore">Bangalore</option>
+	</select>
+	</div>
+	<div>
+		<h3>Enter Number of Stopage</h3>
+	<select name="Stopage">
+		<option value="0">0</option>
+		<option value="1">1</option>
+		<option value="2">2</option>
+		<option value="3">3</option>
+		<option value="4">4</option>
+
+	</select>
+	</div>
+	<div>
+		<h3>Enter Your Destination</h3>
+	<select name="Destination">
+		<option value="Delhi">Delhi</option>
+		<option value="Hyderabad">Hyderabad</option>
+		<option value="Kolkata">Kolkata</option>
+		<option value="NewDelhi">New Delhi</option>
+		<option value="Cochin">Cochin</option>
+		<option value="Bangalore">Bangalore</option>
+
+	</select>
+	</div>
+	<div>
+		<h3>Enter The Airline</h3>
+	<select name="Airline">
+		<option value="Jet Airways">Jet Airways</option>
+		<option value="IndiGo">IndiGo</option>
+		<option value="AirIndia">AirIndia</option>
+		<option value="Multiple Carriers">Multiple Carriers</option>
+		<option value="SpiceJet">SpiceJet</option>
+		<option value="Vistara">Vistara</option>
+		<option value="AirAsia">AirAsia</option>
+		<option value="Multiple Carriers with Premium Convoy">Multiple Carriers with Premium Convoy</option>
+		<option value="Jet Airways Business">Jet Airways Business</option>
+		<option value="Vistara Premium Economy">Vistara Premium Economy</option>
+		<option value="AirAsia">Air Asia</option>
+	</select>
+	</div>
+	<br>
+	<br>
+	<br>
+	<br>
+	<div>
+	<input type="submit">
+	</div>
+	<br>
+	<br>
+	<br>
+	<br>
+	{% if price %} 
+		<h2> Your Flight Price Is: Rs.{{price}} </h2>
+	{% endif %}
+</form>
+</body>
+</html>
